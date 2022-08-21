@@ -2,12 +2,14 @@ package br.com.paulobof.academiaspringboot.service.Impl;
 
 import br.com.paulobof.academiaspringboot.entity.Aluno;
 import br.com.paulobof.academiaspringboot.entity.AvaliacaoFisica;
-import br.com.paulobof.academiaspringboot.DTO.AlunoForm;
-import br.com.paulobof.academiaspringboot.DTO.AlunoUpdateForm;
+import br.com.paulobof.academiaspringboot.dto.AlunoForm;
+import br.com.paulobof.academiaspringboot.dto.AlunoUpdateForm;
 import br.com.paulobof.academiaspringboot.service.AlunoService;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
 public class AlunoServiceImpl implements AlunoService {
     @Override
     public Aluno create(AlunoForm form) {

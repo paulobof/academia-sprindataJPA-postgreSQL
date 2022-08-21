@@ -1,5 +1,7 @@
 package br.com.paulobof.academiaspringboot.entity;
 
+import org.springframework.data.annotation.CreatedDate;
+
 import javax.persistence.Column;
 import java.time.LocalDateTime;
 
@@ -9,7 +11,8 @@ public class AvaliacaoFisica {
 
     private Aluno aluno;
 
-    private LocalDateTime dataDaAvaliacao = LocalDateTime.now();
+    @CreatedDate
+    private LocalDateTime dataDaAvaliacao;
 
     private double peso;
 

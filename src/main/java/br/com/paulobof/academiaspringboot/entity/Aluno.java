@@ -1,7 +1,6 @@
 package br.com.paulobof.academiaspringboot.entity;
 
 import java.time.LocalDate;
-import java.util.ArrayList;
 import java.util.List;
 
 public class Aluno {
@@ -16,6 +15,6 @@ public class Aluno {
 
     private LocalDate dataDeNascimento;
 
-    private List<AvaliacaoFisica> avaliacoes = new ArrayList<>();
+    private List<AvaliacaoFisica> avaliacoes;
 
 }

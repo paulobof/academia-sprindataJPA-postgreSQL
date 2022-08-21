@@ -1,6 +1,6 @@
 package br.com.paulobof.academiaspringboot.entity;
 
-import javax.persistence.*;
+import org.springframework.data.annotation.CreatedDate;
 import java.time.LocalDateTime;
 
 public class Matricula {
@@ -9,5 +9,6 @@ public class Matricula {
 
     private Aluno aluno;
 
-    private LocalDateTime dataDaMatricula = LocalDateTime.now();
+    @CreatedDate
+    private LocalDateTime dataDaMatricula;
 }
