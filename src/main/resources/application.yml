@@ -1,12 +1,30 @@
-server.port: 8081
-
+server:
+  port: ${BACK_PORT}
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:5432/academia?useTimezone=true&serverTimezone=UTC&useLegacyDate
-    username: postgres
-    password: changeme
+    password: ${DB_PASSWORD}
+    driver-class-name: org.postgresql.Driver
+    hikari:
+      idle-timeout: '10000'
+      maximum-pool-size: '5'
+      minimum-idle: '3'
+    username: ${DB_USER}
+    url: jdbc:postgresql://${DB_HOST}:${DB_PORT}/${DB_NAME}?useTimezone=true&serverTimezone=UTC&useLegacyDate
   jpa:
-    show-sql: true
+    generate-ddl: 'true'
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQL10Dialect
+        format_sql: 'true'
+    database: postgresql
+    show-sql: 'false'
     hibernate:
       ddl-auto: update
-
+    open-in-view: 'false'
+    database-platform: org.hibernate.dialect.PostgreSQL10Dialect
+logging:
+  level:
+    org:
+      hibernate: info
+      springframework: info
+    web: info
