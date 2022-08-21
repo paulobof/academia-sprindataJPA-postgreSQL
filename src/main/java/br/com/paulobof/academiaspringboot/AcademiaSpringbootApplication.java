@@ -1,6 +1,5 @@
 package br.com.paulobof.academiaspringboot;
 
-import br.com.paulobof.academiaspringboot.entity.Log;
 import br.com.paulobof.academiaspringboot.repository.LogRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
