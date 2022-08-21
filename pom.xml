@@ -12,7 +12,7 @@
     <artifactId>academia-springboot</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>academia-springboot</name>
-    <description>academia-springboot</description>
+    <description>API RESTfull com SPRINGDATA JPA + PostgreSQL modelando uma academia</description>
     <properties>
         <java.version>17</java.version>
     </properties>
