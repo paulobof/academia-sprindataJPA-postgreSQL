@@ -1,4 +1,4 @@
-package br.com.paulobof.academiaspringboot.config;
+package br.com.paulobof.academiaspringboot.core.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

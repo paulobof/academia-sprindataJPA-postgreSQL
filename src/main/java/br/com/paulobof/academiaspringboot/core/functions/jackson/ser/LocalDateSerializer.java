@@ -1,4 +1,4 @@
-package br.com.paulobof.academiaspringboot.infra.jackson.ser;
+package br.com.paulobof.academiaspringboot.core.functions.jackson.ser;
 
 import br.com.paulobof.academiaspringboot.infra.utils.JavaTimeUtils;
 import com.fasterxml.jackson.core.JsonGenerator;

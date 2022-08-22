@@ -43,6 +43,7 @@ services:
       - postgres
 
   backend:
+    container_name: springboot-app
     env_file: .env
     build:
       context: .

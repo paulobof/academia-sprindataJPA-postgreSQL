@@ -1,10 +1,10 @@
-package br.com.paulobof.academiaspringboot.service.Impl;
+package br.com.paulobof.academiaspringboot.infrastructure.implementation;
 
-import br.com.paulobof.academiaspringboot.entity.Aluno;
-import br.com.paulobof.academiaspringboot.entity.AvaliacaoFisica;
-import br.com.paulobof.academiaspringboot.dto.AlunoForm;
-import br.com.paulobof.academiaspringboot.dto.AlunoUpdateForm;
-import br.com.paulobof.academiaspringboot.service.AlunoService;
+import br.com.paulobof.academiaspringboot.domain.service.AlunoService;
+import br.com.paulobof.academiaspringboot.domain.entity.Aluno;
+import br.com.paulobof.academiaspringboot.domain.entity.AvaliacaoFisica;
+import br.com.paulobof.academiaspringboot.domain.dto.AlunoDto;
+import br.com.paulobof.academiaspringboot.domain.dto.AlunoUpdateDto;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -12,7 +12,7 @@ import java.util.List;
 @Service
 public class AlunoServiceImpl implements AlunoService {
     @Override
-    public Aluno create(AlunoForm form) {
+    public Aluno create(AlunoDto form) {
         return null;
     }
 
@@ -27,7 +27,7 @@ public class AlunoServiceImpl implements AlunoService {
     }
 
     @Override
-    public Aluno update(Long id, AlunoUpdateForm formUpdate) {
+    public Aluno update(Long id, AlunoUpdateDto formUpdate) {
         return null;
     }
 

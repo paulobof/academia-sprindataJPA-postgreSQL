@@ -1,4 +1,4 @@
-package br.com.paulobof.academiaspringboot.entity;
+package br.com.paulobof.academiaspringboot.domain.entity;
 
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;

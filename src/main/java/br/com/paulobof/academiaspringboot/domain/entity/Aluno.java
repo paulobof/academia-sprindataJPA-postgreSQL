@@ -1,4 +1,4 @@
-package br.com.paulobof.academiaspringboot.entity;
+package br.com.paulobof.academiaspringboot.domain.entity;
 
 import java.time.LocalDate;
 import java.util.List;

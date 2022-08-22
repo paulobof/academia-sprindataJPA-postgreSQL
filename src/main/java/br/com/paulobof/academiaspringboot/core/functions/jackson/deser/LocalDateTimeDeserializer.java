@@ -1,4 +1,4 @@
-package br.com.paulobof.academiaspringboot.infra.jackson.deser;
+package br.com.paulobof.academiaspringboot.core.functions.jackson.deser;
 
 import br.com.paulobof.academiaspringboot.infra.utils.JavaTimeUtils;
 import com.fasterxml.jackson.core.JsonParser;

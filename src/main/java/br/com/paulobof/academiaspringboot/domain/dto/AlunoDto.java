@@ -1,10 +1,12 @@
-package br.com.paulobof.academiaspringboot.dto;
+package br.com.paulobof.academiaspringboot.domain.dto;
 
 import java.time.LocalDate;
 
-public class AlunoUpdateForm {
+public class AlunoDto {
 
   private String nome;
+
+  private String cpf;
 
   private String bairro;
 

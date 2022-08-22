@@ -1,8 +1,8 @@
-package br.com.paulobof.academiaspringboot.service.Impl;
+package br.com.paulobof.academiaspringboot.infrastructure.implementation;
 
-import br.com.paulobof.academiaspringboot.entity.Matricula;
-import br.com.paulobof.academiaspringboot.dto.MatriculaForm;
-import br.com.paulobof.academiaspringboot.service.MatriculaService;
+import br.com.paulobof.academiaspringboot.domain.entity.Matricula;
+import br.com.paulobof.academiaspringboot.domain.dto.MatriculaDto;
+import br.com.paulobof.academiaspringboot.domain.service.MatriculaService;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -10,7 +10,7 @@ import java.util.List;
 @Service
 public class MatriculaServiceImpl implements MatriculaService {
     @Override
-    public Matricula create(MatriculaForm form) {
+    public Matricula create(MatriculaDto form) {
         return null;
     }
 

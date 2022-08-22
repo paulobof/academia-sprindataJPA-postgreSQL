@@ -2,5 +2,5 @@ spring:
   datasource:
     driver-class-name: org.h2.Driver
     username: sa
-    url: jdbc:h2:mem:localdb;MODE=MYSQL;db_close_on_exit=false
+    url: jdbc:h2:mem:localdb;MODE=POSTGRESQL;db_close_on_exit=false
     password: ''
