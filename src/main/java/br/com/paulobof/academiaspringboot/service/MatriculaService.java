@@ -1,7 +1,7 @@
 package br.com.paulobof.academiaspringboot.service;
 
 import br.com.paulobof.academiaspringboot.entity.Matricula;
-import br.com.paulobof.academiaspringboot.DTO.MatriculaForm;
+import br.com.paulobof.academiaspringboot.dto.MatriculaForm;
 
 import java.util.List;
 

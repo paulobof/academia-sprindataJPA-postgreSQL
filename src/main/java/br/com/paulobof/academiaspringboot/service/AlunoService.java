@@ -2,8 +2,8 @@ package br.com.paulobof.academiaspringboot.service;
 
 import br.com.paulobof.academiaspringboot.entity.Aluno;
 import br.com.paulobof.academiaspringboot.entity.AvaliacaoFisica;
-import br.com.paulobof.academiaspringboot.DTO.AlunoForm;
-import br.com.paulobof.academiaspringboot.DTO.AlunoUpdateForm;
+import br.com.paulobof.academiaspringboot.dto.AlunoForm;
+import br.com.paulobof.academiaspringboot.dto.AlunoUpdateForm;
 
 import java.util.List;
 

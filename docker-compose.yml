@@ -1,41 +1,71 @@
-version: '3.5'
+version: '3.8'
 
 services:
   postgres:
-    container_name: postgres_container
     image: postgres
+    container_name: postgres_host
+    restart: on-failure
+    env_file:
+      - .env
     environment:
-      POSTGRES_USER: ${POSTGRES_USER:-postgres}
-      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-changeme}
-      PGDATA: /data/postgres
+      POSTGRES_USER: ${DB_USER}
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+      POSTGRES_DB: ${DB_NAME}
+      PGDATA: /var/lib/postgresql/data
     volumes:
-      - postgres:/data/postgres
+      - postgres_data:/var/lib/postgresql/data
     ports:
-      - "5432:5432"
+      - "${DB_PORT}:${DB_PORT}"
     networks:
-      - postgres
-    restart: unless-stopped
+      - academia-spring
+    tty: true
+
 
   pgadmin:
-    container_name: pgadmin_container
+    container_name: pgadmin_host
     image: dpage/pgadmin4
+    restart: unless-stopped
+    env_file:
+      - .env
     environment:
-      PGADMIN_DEFAULT_EMAIL: ${PGADMIN_DEFAULT_EMAIL:-pgadmin4@pgadmin.org}
-      PGADMIN_DEFAULT_PASSWORD: ${PGADMIN_DEFAULT_PASSWORD:-admin}
+      PGADMIN_DEFAULT_EMAIL: ${PGADMIN_EMAIL}
+      PGADMIN_DEFAULT_PASSWORD: ${PGADMIN_PASSWORD}
       PGADMIN_CONFIG_SERVER_MODE: 'False'
     volumes:
-      - pgadmin:/var/lib/pgadmin
-
+      - pgadmin_data:/var/lib/pgadmin
     ports:
-      - "${PGADMIN_PORT:-5050}:80"
+      - "${PGADMIN_PORT}:80"
     networks:
+      - academia-spring
+    links:
       - postgres
+    depends_on:
+      - postgres
+
+  backend:
+    env_file: .env
+    build:
+      context: .
+      dockerfile: Dockerfile
     restart: unless-stopped
+    ports:
+      - "${BACK_PORT}:${BACK_PORT}"
+    environment:
+      DB_HOST: postgres
+    stdin_open: true
+    links:
+      - postgres:postgres
+    depends_on:
+      - postgres
+    networks:
+      - academia-spring
+    tty: true
+
 
 networks:
-  postgres:
+  academia-spring:
     driver: bridge
 
 volumes:
-  postgres:
-  pgadmin:
+  postgres_data:
+  pgadmin_data:

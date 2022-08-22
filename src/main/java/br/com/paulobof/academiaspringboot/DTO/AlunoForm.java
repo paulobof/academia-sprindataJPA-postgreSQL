@@ -1,4 +1,4 @@
-package br.com.paulobof.academiaspringboot.DTO;
+package br.com.paulobof.academiaspringboot.dto;
 
 import java.time.LocalDate;
 

@@ -1,13 +1,18 @@
 package br.com.paulobof.academiaspringboot.entity;
 
-import javax.persistence.*;
+import org.springframework.data.annotation.CreatedDate;
+import org.springframework.data.jpa.domain.support.AuditingEntityListener;
+
+import javax.persistence.EntityListeners;
 import java.time.LocalDateTime;
 
+@EntityListeners(value = AuditingEntityListener.class)
 public class Matricula {
 
     private Long id;
 
     private Aluno aluno;
 
-    private LocalDateTime dataDaMatricula = LocalDateTime.now();
+    @CreatedDate
+    private LocalDateTime dataDaMatricula;
 }
